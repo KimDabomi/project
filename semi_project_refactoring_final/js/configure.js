@@ -3,8 +3,8 @@ const ow_data_url = "http://api.openweathermap.org/data/2.5/";  // openweather u
 const ow_img_url = "http://openweathermap.org/img/wn/";         // openweather icon url
 const ow_key = "20b3deb0c35f2fd8ef4c290a3832aad4";              // openweather key
 const ow_params = '?appid=' + ow_key +'&lang=kr&units=metric';  // openweather parmas
-const go_url = "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst";    // 기상청 url
-const go_key = "5D7PEpDZOd%2FmaRY%2Fcckt2q3W7rQBHSgHXB95PHuCjouBa0eDhNW9qnlJYHt6%2BtcXZ4fCKsWNj6BNep9CmqEECQ%3D%3D";    // 기상청 key
+const go_url = "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst";    // 기상청 url
+const go_key = "2K9mmrDxh9RT7PRP0dnaYU0TpWEmAOSn9r7pUINgR7WCtdRsmd2GVgaOR5MVZIbD3AAFe%2BmEuP%2B6ktisMFQACA%3D%3D";    // 기상청 key
 
 // 도시(지역) 모음
 let areaList = {

@@ -31,19 +31,19 @@ function mainClick(area, json, json2, json3) {
     const mm1 = date.getMonth() + 1;
     const dd1 = date.getDate();
     let today = yy1.toString() + mm1.toString() + dd1.toString(); // 오늘 날짜 today 얻어온 값은 숫자이기 때문에 문자로 변환해서 합침
-
+    console.log(today);
     // 오늘하루의 기상청 단기예보 데이터 w_data(최저, 최고 기온에 쓰임)
-    let w_data = json3.response.body.items.item;
+    // let w_data = json3.response.body.items.item;
     // console.log(w_data);
 
     /** 클릭 이벤트: 상세정보 */
     area1.addEventListener('click', e=> {
         e.preventDefault();
 
-        document.querySelector('#sky').innerHTML = `<img src="${iconUrl}" alt="${description}" />`+ '</br>' + `${description}`;
+        document.querySelector('#sky').innerHTML = `<img src="${iconUrl}" alt="${description}" style='height:70px' />`+ '</br>' + `${description}`;
         document.querySelector('#now').innerHTML = '<span class="material-symbols-outlined">thermostat</span>' + json.main.temp.toFixed(0) + '℃';
-        document.querySelector('#low').innerHTML = '최저기온' + '</br>' + getMinMax('TMN', w_data, today) + '℃';  // 최저기온 TMN
-        document.querySelector('#high').innerHTML = '최고기온' + '</br>' + getMinMax('TMX', w_data, today) + '℃'; // 최고기온 TMX
+        // document.querySelector('#low').innerHTML = '최저기온' + '</br>' + getMinMax('TMN', w_data, today) + '℃';  // 최저기온 TMN
+        // document.querySelector('#high').innerHTML = '최고기온' + '</br>' + getMinMax('TMX', w_data, today) + '℃'; // 최고기온 TMX
         document.querySelector('#rain_persent').innerHTML = '<span class="material-symbols-outlined">water_drop</span>' + '</br>' + '강수확률' + '</br>' + (list[0].pop)*100 + '%';
         document.querySelector('#hum').innerHTML = '<span class="material-symbols-outlined">waves</span>' + '</br>' + '습도' + '</br>' + json.main.humidity + '%';
         document.querySelector('#wind').innerHTML = '<span class="material-symbols-outlined">air</span>' + '</br>' + '풍속' + '</br>' + json.wind.speed + 'm/s';

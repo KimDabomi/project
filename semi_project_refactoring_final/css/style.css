@@ -111,11 +111,13 @@ body {font-family: 'Jua', sans-serif;}
     width: 20%;
     height: 23%;
     margin: 10px auto 20px;
+    padding: 0;
 }
 #now {
     width: 20%;
     height: 6%;
     margin: auto;
+    padding: 0;
 }
 #low {
     width: 30%;

@@ -77,8 +77,8 @@ class weatherApi {
         try {
             const response = await axios.get(`${url}${queryParams}${city2}`);
             // console.log(response);
-            json3 = response.data;
-            // console.log(json3);
+            json3 = response;
+            console.log(json3);
             return json3;
         } catch (e) {
             console.error(e);
